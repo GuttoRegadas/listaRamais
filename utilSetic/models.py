@@ -6,8 +6,10 @@ class Ramais(models.Model):
         verbose_name = "Lista de Ramais"
         verbose_name_plural = "Lista de Ramais"
     colaborador = models.CharField(max_length=100)
-    setor = models.CharField(max_length=100)
     ramal = models.CharField(max_length=100)
     area = models.CharField(max_length=30)
     sala = models.CharField(max_length=30)
     andarBloco = models.CharField(max_length=30)
+
+class Pessoa(models.Model):
+    pessoa = models.CharField(max_length=100)

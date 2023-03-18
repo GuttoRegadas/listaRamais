@@ -14,8 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('utilSetic.urls')),
 ]
+admin.site.site_header = 'FIOCRUZ\nCeará'
+admin.site.site_title = 'FIOCRUZ - Ceará'
+admin.site.index_title = 'Coordenação e Gestão de Pessoas - CGP - ST'
